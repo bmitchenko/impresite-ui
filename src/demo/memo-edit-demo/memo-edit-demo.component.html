@@ -1,0 +1,56 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>memo-edit</h1>
+    </header>
+    <div class="component-playground">
+        <memo-edit></memo-edit>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td><check-box [checked]="memoEdit.autofocus"></check-box></td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="memoEdit.enabled"></check-box></td>
+            </tr>
+            <tr>
+                <td>maxLength</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="memoEdit.maxLength"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td><text-box [(text)]="memoEdit.placeholder"></text-box></td>
+            </tr>
+            <tr>
+                <td>readOnly</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="memoEdit.readOnly"></check-box></td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>[()]</td>
+                <td><text-box [(text)]="memoEdit.text"></text-box></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre>
+            <code>
+&lt;memo-edit&gt;&lt;/memo-edit&gt;
+        </code>
+        </pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

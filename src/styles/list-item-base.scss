@@ -1,0 +1,21 @@
+@import 'theme';
+
+.list-item-base {
+    background: $list-item-background;
+    border: $list-item-border;
+    cursor: default;
+    display: block;
+    font: $input-font;
+    margin: 0;
+    padding: $list-item-padding;
+
+    &:hover, &.active {
+        background: $list-item-background-hover;
+        border: $list-item-border-hover;
+    }
+
+    &.selected {
+        background: $list-item-background-selected;
+        border: $list-item-border-selected;
+    }    
+}

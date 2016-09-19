@@ -1,0 +1,91 @@
+// colors;
+$primary50: #E3F2FD;
+$primary100: #BBDEFB;
+$primary500: #2196f3;
+$primary700: #1976D2;
+$secondary-color: #1976D2;
+$accent: #FFEB3B;
+$accent100: #FFFF8D;
+$warn50: #FFEBEE;
+$warn100: #FFCDD2;
+$warn500: #F44336;
+$warn700: #D32F2F;
+
+// common;
+
+// autocomplete;
+$autocomplete-search-icon: '../../icons/windows-10/search-16.png';
+$autocomplete-search-icon-disabled: '../../icons/windows-10/search-disabled-16.png';
+
+// breadcrumb;
+$breadcrump-splitter-icon: '../../icons/windows-10/next-page-16.png';
+
+// calendar;
+$calendar-left-icon: '../../icons/windows-10/calendar-left-16.png';
+$calendar-right-icon: '../../icons/windows-10/calendar-right-16.png';
+
+// combo-box;
+$combo-box-button-icon: '../../icons/windows-10/drop-down-16.png';
+
+// data-table;
+$data-table-sort-asc-icon: '../../icons/windows-10/sort-asc-16.png';
+$data-table-sort-desc-icon: '../../icons/windows-10/sort-desc-16.png';
+$data-table-previous-page-icon: '../../icons/windows-10/previous-page-16.png';
+$data-table-next-page-icon: '../../icons/windows-10/next-page-16.png';
+
+// date-edit;
+$date-edit-button-icon: '../../icons/windows-10/date-edit-button-16.png';
+
+// dialogs;
+$message-info-icon: '../../icons/windows-10/message-info-48.png';
+$message-error-icon: '../../icons/windows-10/message-error-48.png';
+$message-warning-icon: '../../icons/windows-10/message-warning-48.png';
+$message-question-icon: '../../icons/windows-10/message-question-48.png';
+
+// drop-down;
+$drop-down-background: #fff;
+$drop-down-border: 1px solid #5b9dd9;
+$drop-down-shadow: 3px 3px 4px #e6e6e6;
+
+// input;
+$input-background-color: #fff;
+$input-background-color-disabled: #fbfbfb;
+$input-background-color-focused: #fff;
+$input-background-color-hovered: #fff;
+$input-border: 1px solid #bababa;
+$input-border-disabled: 1px solid #e3e3e3;
+$input-border-focused: 1px solid #5b9dd9;
+$input-border-hovered: 1px solid #8f8f8f;
+$input-button-background-color-hovered: #e0e0e0;
+$input-color: #000;
+$input-color-disabled: #e3e3e3;
+$input-color-focused: #000;
+$input-color-hovered: #000;
+$input-font: normal 13px 'Open Sans';
+$input-height: 28px;
+$input-outline-color: #5b9dd9;
+$input-outline-focused: 1px solid #5b9dd9;
+$input-outline-offset-focused: 0;
+$input-padding: 0 4px;
+$input-placeholder-color: #bababa;
+
+// list;
+
+
+// list-item;
+$list-item-background: transparent;
+$list-item-background-selected: #dcebfc; 
+$list-item-background-hover: #f2f7fd; 
+$list-item-border: 1px solid transparent;
+$list-item-border-selected: 1px solid #b8d6fb;
+$list-item-border-hover: 1px solid #b8d6fb;
+$list-item-color: #007acc;
+$list-item-padding: 2px;
+
+// numeric-edit;
+$numeric-edit-increase-icon: '../../icons/windows-10/numeric-edit-increase-10.png';
+$numeric-edit-decrease-icon: '../../icons/windows-10/numeric-edit-decrease-10.png';
+
+// tree;
+$tree-node-collapsed-icon: '../../icons/windows-10/tree-node-collapsed-16.png';
+$tree-node-expanded-icon: '../../icons/windows-10/tree-node-expanded-16.png';

@@ -1,0 +1,96 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>check-box</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <h3>Set mode</h3>
+            <check-box>remember me</check-box>
+        </section>
+        <section>
+            <h3>Push mode</h3>
+            <check-box mode="push" [(value)]="pushValue" [checkedValue]="1">Item 1</check-box>
+            <check-box mode="push" [(value)]="pushValue" [checkedValue]="2">Item 2</check-box>
+            <check-box mode="push" [(value)]="pushValue" [checkedValue]="3">Item 3</check-box>
+            <check-box mode="push" [(value)]="pushValue" [checkedValue]="4">Item 4</check-box>
+            <check-box mode="push" [(value)]="pushValue" [checkedValue]="5">Item 5</check-box>
+            <div class="component-value">
+                Value: {{pushValueText}}
+            </div>
+        </section>
+        <section>
+            <h3>Flag mode</h3>
+            <check-box mode="flag" [(value)]="flagValue" [checkedValue]="1">Item 1</check-box>
+            <check-box mode="flag" [(value)]="flagValue" [checkedValue]="2">Item 2</check-box>
+            <check-box mode="flag" [(value)]="flagValue" [checkedValue]="4">Item 4</check-box>
+            <check-box mode="flag" [(value)]="flagValue" [checkedValue]="8">Item 8</check-box>
+            <check-box mode="flag" [(value)]="flagValue" [checkedValue]="16">Item 16</check-box>
+            <div class="component-value">
+                Value: {{flagValue}}
+            </div>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="checkBox.autofocus"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>checked</td>
+                <td>[()]</td>
+                <td>
+                    <check-box [(checked)]="checkBox.checked"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>checkedValue</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="checkBox.checkedValue"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="checkBox.enabled"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>mode</td>
+                <td>[]</td>
+                <td>
+                    <combo-box [items]="['set', 'flag', 'push']" [(selectedItem)]="checkBox.mode"></combo-box>
+                </td>
+            </tr>
+            <tr>
+                <td>uncheckedValue</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="checkBox.uncheckedValue"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td>
+                    <text-box [(text)]="checkBox.value"></text-box>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code>&lt;check-box&gt;remember me&lt;/check-box&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

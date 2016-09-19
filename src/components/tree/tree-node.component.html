@@ -1,0 +1,11 @@
+<div class="tree-node-content" (click)="nodeClick()">
+    <div class="tree-node-button" [style.flex-basis.px]="buttonWidth"></div>
+    <div class="tree-node-text">
+        <template [ngTemplateOutlet]="template" [ngOutletContext]="{ $implicit: data }"></template>
+    </div>
+</div>
+<div class="tree-node-children">
+    <div *ngIf="_loading" class="tree-node-loading-indicator">{{_loadingStatus}}</div>
+    <tree-node *ngFor="let node of nodes" [level]="level + 1" [data]="node" [clickCallback]="clickCallback" [template]="template"
+        [nodesProperty]="nodesProperty" [loadFunction]="load"></tree-node>
+</div>

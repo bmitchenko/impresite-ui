@@ -1,0 +1,78 @@
+@import "../../styles/list-item-base";
+@import "../../styles/theme";
+
+:host {
+   
+    &.tree-node-expandable {
+        & > .tree-node-content {
+            font-weight: 600;
+
+            & > .tree-node-button {
+                background-image: url($tree-node-collapsed-icon);
+            }
+        }
+    }
+
+    &.tree-node-expanded {
+        & > .tree-node-content {
+         //   text-decoration: underline;
+
+            & > .tree-node-button {
+                background-image: url($tree-node-expanded-icon);
+                background-position: right 5px top 8px;
+            }
+        }
+
+        & > .tree-node-children {
+            display: block;
+        }
+    }
+
+    &.tree-node-selected {
+        & > .tree-node-content {
+            background-color: #eee;
+            color: $primary700;
+        }
+    }
+}
+
+.tree-node-content {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 2px 10px;
+
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.tree-node-button {
+    background-position: right 6px top 6px;
+    background-repeat: no-repeat;
+    flex: 0 0 26px;
+}
+
+.tree-node-text {
+    align-items: center;
+    display: flex;
+    flex: 1;
+}
+
+.tree-node-children {
+    display: none;
+}
+
+.tree-node-loading-indicator {
+
+}
+
+// <div class="tree-node-content">
+//     <div class="tree-node-button"></div>
+//     <div class="tree-node-text">
+//         <template [ngTemplateOutlet]="template" [ngOutletContext]="{ $implicit: data }"></template>
+//     </div>
+// </div>
+// <div class="tree-node-children">
+//     <div class="tree-node-loading-indicator">Загрузка...</div>
+//         <tree-node *ngFor="let node of nodes" [data]="node" [template]="template"></tree-node>
+// </div>

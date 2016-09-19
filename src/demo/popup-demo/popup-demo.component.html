@@ -1,0 +1,74 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>popup</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <div #divWithPopup class="popup-target">Popup target</div>
+            <popup [target]="divWithPopup" class="popup-message">
+                Popup message.
+            </popup>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autoclose</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="popup.autoclose"></check-box></td>
+            </tr>
+            <tr>
+                <td>hoverDelay</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="popup.hoverDelay"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>[]</td>
+                <td>
+                    <combo-box [items]="popupPositions" [(selectedItem)]="popup.position"></combo-box>
+                </td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>[]</td>
+                <td>ElementRef | HTMLElement</td>
+            </tr>
+            <tr>
+                <td>targetHeight</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="popup.targetHeight"></check-box></td>
+            </tr>
+            <tr>
+                <td>targetWidth</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="popup.targetWidth"></check-box></td>
+            </tr>
+            <tr>
+                <td>trigger</td>
+                <td>[]</td>
+                <td>
+                    <combo-box [items]="popupTriggers" [(selectedItem)]="popup.trigger"></combo-box>
+                </td>
+            </tr>
+            <tr>
+                <td>visible</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="popup.visible"></check-box></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;div #divWithPopup&gt;Popup target&lt;/div&gt;
+&lt;popup [target]=&quot;divWithPopup&quot;&gt;
+    Popup message.
+&lt;/popup&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+@import "../../styles/theme";
+
+:host {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px 0;
+
+    .pivot-fill {
+        display: none;
+    }
+
+    &.tab-mode {
+        padding: 0;
+
+        .pivot-fill {
+            border-bottom: 1px solid #e1e1e1;
+            display: block;
+            flex: 1;
+        }
+    }
+}

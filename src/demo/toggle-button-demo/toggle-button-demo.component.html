@@ -1,0 +1,51 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>toggle-button</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <toggle-button [(selectedIndex)]="selectedIndex" [(value)]="ng2">
+                <toggle-button-option value="ng2">Angular 2</toggle-button-option>
+                <toggle-button-option value="aurelia">Aurelia</toggle-button-option>
+                <toggle-button-option value="react">React</toggle-button-option>
+            </toggle-button>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>equalWidth</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="toggleButton.equalWidth"></check-box></td>
+            </tr>
+            <tr>
+                <td>selectedIndex</td>
+                <td>[()]</td>
+                <td>
+                    <numeric-edit [(value)]="toggleButton.selectedIndex" [min]="-1" [max]="2"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td>
+                    <combo-box [items]="['ng2', 'aurelia', 'react']" [(selectedItem)]="toggleButton.value"></combo-box>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;pivot [(selectedIndex)]=&quot;selectedIndex&quot; [(value)]=&quot;value&quot;&gt;
+    &lt;pivot-item value=&quot;employees&quot;&gt;Employees (10)&lt;/pivot-item&gt;
+    &lt;pivot-item value=&quot;customers&quot;&gt;Customers (50)&lt;/pivot-item&gt;
+    &lt;pivot-item value=&quot;users&quot;&gt;Users&lt;/pivot-item&gt;
+&lt;/pivot&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

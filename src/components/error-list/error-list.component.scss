@@ -1,0 +1,50 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: column nowrap;
+}
+
+.error-list-item {
+    animation: errorfadein 0.2s forwards;
+    background-color: $warn50;
+    border-left: 4px solid $warn500;
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    overflow: hidden;
+
+    &.hidden {
+        animation: errorfadeout 0.2s forwards;
+    }
+}
+
+@keyframes errorfadein {
+    from {
+        margin-bottom: 0;
+        max-height: 0;
+        padding: 0 16px;
+    }
+
+    to {
+        margin-bottom: 8px;
+        max-height: 100px;
+        padding: 5px 16px;
+    }
+}
+
+@keyframes errorfadeout {
+    from {
+        margin: 0 0 8px 0;
+        max-height: 100px;
+        padding: 5px 16px;
+    }
+
+    to {
+        margin: 0;
+        max-height: 0;
+        padding: 0 16px;
+    }
+}

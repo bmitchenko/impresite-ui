@@ -1,0 +1,51 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>date-edit</h1>
+    </header>
+    <div class="component-playground">
+        <date-edit></date-edit>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="dateEdit.autofocus"></check-box></td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="dateEdit.enabled"></check-box></td>
+            </tr>
+            <tr>
+                <td>format</td>
+                <td>[]</td>
+                <td><text-box [(text)]="dateEdit.format"></text-box></td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td><text-box [(text)]="dateEdit.placeholder"></text-box></td>
+            </tr>
+            <tr>
+                <td>readOnly</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="dateEdit.readOnly"></check-box></td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td><date-edit [(value)]="dateEdit.value"></date-edit></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

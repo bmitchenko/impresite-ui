@@ -1,0 +1,30 @@
+@import "../../styles/theme";
+@import "../../styles/list-item-base";
+
+:host {
+    border: $input-border;
+    display: inline-block;
+
+    &:hover {
+        background-color: $input-background-color-hovered;
+        border: $input-border-hovered;
+    }
+
+    &:focus {
+        background-color: $input-background-color-focused;
+        border: $input-border-focused;
+        outline: $input-outline-focused;
+        outline-offset: $input-outline-offset-focused;
+    }
+}
+
+.list-container {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
+.list-item {
+    @extend .list-item-base;
+}

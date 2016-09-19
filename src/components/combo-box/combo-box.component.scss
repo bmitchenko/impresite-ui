@@ -1,0 +1,63 @@
+@import "../../styles/drop-down-base";
+@import "../../styles/input-base";
+@import "../../styles/list-item-base";
+@import "../../styles/theme";
+
+:host {
+    @extend .input-base;
+    
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    vertical-align: bottom;
+    width: 300px;
+
+    &[disabled], &.disabled {
+        .combo-box-button {
+            opacity: 0.2;
+        }
+    }
+}
+
+.combo-box-input {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.combo-box-input-value {
+    cursor: default;
+    flex: 1;
+    overflow: hidden;
+    padding: $input-padding;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.placeholder {
+        color: $input-placeholder-color;        
+    }
+}
+
+.combo-box-button {
+    align-self: stretch;
+    background: url($combo-box-button-icon) center center no-repeat;
+    flex: 0 0 $input-height;
+}
+
+.combo-box-popup {
+    @extend .drop-down-base;
+
+    max-height: 300px;
+    overflow: auto;
+    padding: 1px;
+}
+
+.combo-box-item {
+    @extend .list-item-base;
+
+    &.empty {
+        color: $input-placeholder-color;        
+    }
+}

@@ -1,0 +1,38 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.tab-labels {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+}
+
+.tab-label {
+    color: #333;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 8px 12px 4px 12px;
+
+    &:hover:not(.active) {
+        background-color: #dcebfc;
+    }
+
+    &.active {
+        background-color: #b8d6fb;
+        color: #000;
+        cursor: default;
+    }
+}
+
+.tab-content {
+    border: 1px solid #e8e7e4;
+    border-top: 3px solid #b8d6fb;
+    flex: 1 1 auto;
+    overflow: auto;
+    padding: 12px;
+}

@@ -1,0 +1,61 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>text-box</h1>
+    </header>
+    <div class="component-playground">
+        <text-box></text-box>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td><check-box [checked]="textBox.autofocus"></check-box></td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="textBox.enabled"></check-box></td>
+            </tr>
+            <tr>
+                <td>maxLength</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="textBox.maxLength"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td><text-box [(text)]="textBox.placeholder"></text-box></td>
+            </tr>
+            <tr>
+                <td>readOnly</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="textBox.readOnly"></check-box></td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>[()]</td>
+                <td><text-box [(text)]="textBox.text"></text-box></td>
+            </tr>
+            <tr>
+                <td>usePasswordChar</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="textBox.usePasswordChar"></check-box></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre>
+            <code>
+<!--&lt;text-box&gt;remember me&lt;/text-box&gt;-->
+        </code>
+        </pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

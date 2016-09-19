@@ -1,0 +1,9 @@
+<div class="modal-window-content" [class.with-title]="titleElement?.children?.length > 0">
+    <div #titleElement class="modal-window-title"><ng-content select="header"></ng-content></div>
+    <div class="modal-window-body">
+        <ng-content select="main"></ng-content>
+    </div>
+</div>
+<div class="modal-window-footer">
+    <ng-content select="footer"></ng-content>
+</div>

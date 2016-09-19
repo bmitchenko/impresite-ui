@@ -1,0 +1,2 @@
+<ng-content></ng-content>
+<breadcrumb-item *ngFor="let item of items" [url]="getItemMember(item, 'url')" [active]="getItemMember(item, 'active')">{{getItemMember(item, 'text')}}</breadcrumb-item>

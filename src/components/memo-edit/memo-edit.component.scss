@@ -1,0 +1,22 @@
+@import "../../styles/theme";
+@import "../../styles/input-base";
+
+:host {
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    height: $input-height * 3;
+    vertical-align: bottom;
+    width: 300px;
+}
+
+.memo-edit-input {
+    @extend .input-base;
+
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+    padding: 4px;
+    resize: none;
+    width: 100%;
+}

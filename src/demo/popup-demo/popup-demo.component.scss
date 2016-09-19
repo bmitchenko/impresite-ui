@@ -1,0 +1,22 @@
+:host {
+    .popup-target {
+        border: 4px dashed #eee;
+        color: #ddd;
+        cursor: default;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 100px;
+        height: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 200px;
+    }
+
+    .popup-message {
+        background-color: #fff;
+        border: 1px solid #aaf;
+        font-size: 13px;
+        padding: 8px;
+    }
+}

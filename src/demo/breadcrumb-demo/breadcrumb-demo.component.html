@@ -1,0 +1,40 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>breadcrumb</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <h3>Static items</h3>
+            <breadcrumb>
+                <breadcrumb-item url="#">Home</breadcrumb-item>
+                <breadcrumb-item url="#">Catalog</breadcrumb-item>
+                <breadcrumb-item url="#" active>About</breadcrumb-item>
+            </breadcrumb>
+        </section>
+        <section>
+            <h3>Dynamic items</h3>
+            <breadcrumb [items]="items"></breadcrumb>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code>&lt;breadcrumb&gt;
+    &lt;breadcrumb-item url=&quot;#&quot;&gt;Home&lt;/breadcrumb-item&gt;
+    &lt;breadcrumb-item url=&quot;#&quot;&gt;Catalog&lt;/breadcrumb-item&gt;
+    &lt;breadcrumb-item url=&quot;#&quot; active&gt;About&lt;/breadcrumb-item&gt;
+&lt;/breadcrumb&gt;
+
+&lt;breadcrumb [items]=&quot;items&quot;&gt;&lt;/breadcrumb&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

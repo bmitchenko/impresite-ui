@@ -1,0 +1,141 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>data-table</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <data-table>
+                <data-column name="id" sort="none" maxWidth="60px">
+                    <template header-cell>ID</template>
+                    <template cell let-row><small>{{row.id}}</small></template>
+                </data-column>
+                <data-column name="firstName" sort="none">
+                    <template header-cell>First Name</template>
+                    <template cell let-row><strong>{{row.firstName}}</strong></template>
+                </data-column>
+                <data-column name="lastName" sort="none">
+                    <template header-cell>Last Name</template>
+                    <template cell let-row>{{row.lastName}}</template>
+                </data-column>
+                <data-column name="company" sort="none">
+                    <template header-cell>Company</template>
+                    <template cell let-row>{{row.company}}</template>
+                </data-column>
+                <data-column name="email" sort="none">
+                    <template header-cell>Email</template>
+                    <template cell let-row>{{row.email}}</template>
+                </data-column>
+                <data-column name="phone" class="numeric" sort="none" minWidth="150px">
+                    <template header-cell>Phone</template>
+                    <template cell let-row>{{row.phone}}</template>
+                    <template footer-cell><a href="#">Send SMS</a></template>
+                </data-column>
+                <data-column name="address" sort="none">
+                    <template header-cell>Address</template>
+                    <template cell let-row>{{row.address}}</template>
+                </data-column>
+                <data-column name="actions" maxWidth="100px">
+                    <template cell let-row><a href="#" (click)="deleteClick(row, $event)">Edit</a></template>
+                </data-column>
+                <template data-status-text>{{currentStatus}}</template>
+            </data-table>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>buffer</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="dataTable.buffer"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>data</td>
+                <td>[]</td>
+                <td>
+                    IDataSource
+                </td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="dataTable.footer"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>header</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="dataTable.header"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>page</td>
+                <td>[()]</td>
+                <td>
+                    <numeric-edit [(value)]="dataTable.page" [min]="1"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>pageSize</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="dataTable.pageSize" [min]="0"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>selectedRow</td>
+                <td>[()]</td>
+                <td>
+                    {{dataTable.selectedRow?.id}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;data-table&gt;
+    &lt;data-column name=&quot;id&quot; sort=&quot;none&quot;&gt;
+        &lt;template header-cell&gt;ID&lt;/template&gt;
+        &lt;template cell let-row&gt;&lt;small&gt;{{row.id}}&lt;/small&gt;&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;firstName&quot; sort=&quot;none&quot;&gt;
+        &lt;template header-cell&gt;First Name&lt;/template&gt;
+        &lt;template cell let-row&gt;&lt;strong&gt;{{row.firstName}}&lt;/strong&gt;&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;lastName&quot; sort=&quot;none&quot;&gt;
+        &lt;template header-cell&gt;Last Name&lt;/template&gt;
+        &lt;template cell let-row&gt;{{row.lastName}}&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;company&quot; sort=&quot;none&quot;&gt;
+        &lt;template header-cell&gt;Company&lt;/template&gt;
+        &lt;template cell let-row&gt;{{row.company}}&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;email&quot;&gt;
+        &lt;template header-cell&gt;Email&lt;/template&gt;
+        &lt;template cell let-row&gt;{{row.email}}&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;phone&quot; class=&quot;numeric&quot; sort=&quot;none&quot; minWidth=&quot;150px&quot;&gt;
+        &lt;template header-cell&gt;Phone&lt;/template&gt;
+        &lt;template cell let-row&gt;{{row.phone}}&lt;/template&gt;
+        &lt;template footer-cell&gt;&lt;a href=&quot;#&quot;&gt;Send SMS&lt;/a&gt;&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;address&quot;&gt;
+        &lt;template header-cell&gt;Address&lt;/template&gt;
+        &lt;template cell let-row&gt;{{row.address}}&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;data-column name=&quot;address&quot;&gt;
+        &lt;template cell let-row&gt;&lt;a (click)=&quot;deleteClick(row)&quot;&gt;Edit&lt;/a&gt;&lt;/template&gt;
+    &lt;/data-column&gt;
+    &lt;template data-status-text&gt;{{currentStatus}}&lt;/template&gt;
+&lt;/data-table&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

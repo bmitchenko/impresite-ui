@@ -1,0 +1,87 @@
+@import "../../styles/theme";
+@import "../../styles/input-base";
+
+:host {
+    @extend .input-base;
+
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    height: $input-height;
+    padding: 0;
+    width: 150px;
+
+    &[disabled], &.readonly {
+        .numeric-edit-buttons {
+            opacity: 0.3;
+        }
+
+        .numeric-edit-button {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.numeric-edit-input-container {
+    align-self: stretch;
+    flex: 1;
+}
+
+.numeric-edit-input {
+    @extend .input-base;
+
+    border: 0;
+    height: 100%;
+    padding: $input-padding;
+    text-align: right;
+    width: 100%;
+
+    &:focus, &:hover, &[disabled] {
+        border: 0;
+        outline: 0;
+    }
+
+    &::-ms-clear { 
+        display:none; 
+    }
+}
+
+.numeric-edit-suffix {
+    color: $input-placeholder-color;
+    flex: 0 0 auto;
+    padding: 0 4px;
+}
+
+.numeric-edit-buttons {
+    align-self: stretch;
+    align-items: stretch;
+    display: flex;
+    flex: 0 0 16px;
+    flex-flow: column nowrap;
+}
+
+.numeric-edit-button {
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    flex: 1;
+    padding: 0;
+
+    &:hover:not([disabled]) {
+        background-color: #e0e0e0;
+    }
+
+    &[disabled] {
+        opacity: 0.3;
+    }
+}
+
+.numeric-edit-button-increase {
+    background-image: url($numeric-edit-increase-icon);
+}
+
+.numeric-edit-button-decrease {
+    background-image: url($numeric-edit-decrease-icon);
+}

@@ -1,0 +1,20 @@
+<div class="calendar-controls">
+    <div class="calendar-button calendar-back" (click)="previousPage()"></div>
+    <div class="calendar-button calendar-up" (click)="levelUp()">{{_parentName}}</div>
+    <div class="calendar-button calendar-forward" (click)="nextPage()"></div>
+</div>
+<div class="calendar-header" *ngIf="_headerVisible">
+    <div>пн</div>
+    <div>вт</div>
+    <div>ср</div>
+    <div>чт</div>
+    <div>пт</div>
+    <div>сб</div>
+    <div>вс</div>
+</div>
+<div class="calendar-items" [class.calendar-years]="_isYears" [class.calendar-months]="_isMonths" [class.calendar-days]="_isDays">
+    <div *ngFor="let item of _items" (click)="itemClick(item.value)" class="calendar-item" [class.grayed]="item.isGrayed" [class.selected]="item.isSelected"
+        [class.today]="item.isToday">
+        <span>{{item.text}}</span>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>combo-box</h1>
+    </header>
+    <div class="component-playground">
+
+        <section>
+            <h3>Array of JSON (id, name)</h3>
+            <combo-box></combo-box>
+        </section>
+
+        <section>
+            <h3>Display text from function</h3>
+            <combo-box [items]="customers" [displayMember]="getCustomerName"></combo-box>
+        </section>
+
+        <section>
+            <h3>Custom template</h3>
+            <combo-box [items]="customers" [displayMember]="getCustomerName">
+                <template let-item>
+                    <strong>{{item.firstName}} {{item.lastName}}</strong><br /> {{item.phone}}
+                </template>
+            </combo-box>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="comboBox.autofocus"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>displayMember</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="comboBox.displayMember"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>emptyText</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="comboBox.emptyText"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="comboBox.enabled"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>items</td>
+                <td>[]</td>
+                <td>array of (id: number, name: string)</td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="comboBox.placeholder"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>selectedItem</td>
+                <td>[()]</td>
+                <td>{{comboBox.selectedItem}}</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>[()]</td>
+                <td>
+                    <text-box [(text)]="comboBox.text"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td>
+                    <text-box [(text)]="comboBox.value"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>valueMember</td>
+                <td>[()]</td>
+                <td>
+                    <text-box [(text)]="comboBox.valueMember"></text-box>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre ngNonBindable><code>&lt;combo-box&gt;&lt;/combo-box&gt;
+
+&lt;combo-box [items]=&quot;customers&quot; [displayMember]=&quot;getCustomerName&quot;&gt;&lt;/combo-box&gt;
+
+&lt;combo-box [items]=&quot;customers&quot; [displayMember]=&quot;getCustomerName&quot;&gt;
+    &lt;template let-item&gt;
+        &lt;strong&gt;{{item.firstName}} {{item.lastName}}&lt;/strong&gt;&lt;br /&gt; {{item.phone}}
+    &lt;/template&gt;
+&lt;/combo-box&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

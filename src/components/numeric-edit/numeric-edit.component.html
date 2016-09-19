@@ -1,0 +1,9 @@
+<div class="numeric-edit-input-container">
+    <input #inputElement class="numeric-edit-input" maxlength="16" type="text" [(ngModel)]="inputText" [placeholder]="placeholderText" [readonly]="readOnly"
+        [attr.disabled]="disabled" (keydown)="onInputKeyPress($event)" />
+</div>
+<div class="numeric-edit-suffix" *ngIf="suffix">{{suffix}}</div>
+<div class="numeric-edit-buttons">
+    <div class="numeric-edit-button numeric-edit-button-increase" (click)="increase()"></div>
+    <div class="numeric-edit-button numeric-edit-button-decrease" (click)="decrease()"></div>
+</div>

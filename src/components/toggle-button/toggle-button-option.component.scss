@@ -1,0 +1,42 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: center;
+    background-color: rgba(#999, 0.1);
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 auto;
+    font-size: 14px;
+    justify-content: center;
+    margin: 0 1px 0 0;
+    padding: 4px 16px;
+
+    &:first-child {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        margin: 0;
+    }
+
+    &:hover {
+        background-color: rgba(#999, 0.2);
+    }
+
+    &.toggle-button-option-selected {
+        background-color: $primary500;
+        color: #fff;
+    }
+}
+
+:host-context(.toggle-button-equal-width) {
+    flex: 1;
+}
+
+.toggle-button-option-content {
+    flex: 1;
+}

@@ -1,0 +1,51 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 2px;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 8px;
+    height: 32px;
+    min-width: 88px;
+    outline: 0;
+    text-transform: uppercase;
+    vertical-align: bottom;
+
+    .flat-button-content {
+        flex: 1;
+        font-family: "Roboto";
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &.primary {
+        background-color: transparent;
+        color: $primary500;
+    }
+
+    &.warn {
+        background-color: transparent;
+        color: $warn500;
+    }
+
+    &:hover, &:focus {
+        &:not([disabled]):not(:active) {
+            background-color: rgba(#999, 0.2);
+        }
+    }
+
+    &:active:not([disabled]) {
+        background-color: rgba(#999, 0.4);
+    }
+
+    &[disabled] {
+        color: rgba(#000, 0.26);
+        cursor: default;
+    }
+}

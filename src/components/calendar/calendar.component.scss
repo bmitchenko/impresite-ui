@@ -1,0 +1,130 @@
+@import "../../styles/theme";
+@import "../../styles/theme";
+
+//@calendar-border:;
+//
+//@calendar-font: normal 13px 'Open Sans';
+
+$calendar-controls-height: 25px;
+$calendar-header-height: 25px;
+
+:host {
+    align-items: stretch;
+    background-color: white;
+    border: 1px solid #bababa;
+    box-sizing: border-box;
+    cursor: default;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    font-size: 13px;
+    height: 200px;
+    width: 180px;
+}
+
+.calendar-controls {
+    align-items: stretch;
+    display: flex;
+    flex: 0 0 $calendar-controls-height;
+    flex-flow: row nowrap;
+}
+
+.calendar-button {
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    flex: 0 0 30px;
+
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.calendar-back {
+    background-image: url($calendar-left-icon);
+}
+
+.calendar-forward {
+    background-image: url($calendar-right-icon);
+}
+
+.calendar-up {
+    flex: 1;
+    line-height: $calendar-controls-height;
+    text-align: center;
+}
+
+.calendar-header {
+    color: gray;
+    display: flex;
+    flex: 0 0 $calendar-header-height;
+    flex-flow: row nowrap;
+
+    & > * {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.calendar-items {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+
+    &.calendar-days {
+        & > * {
+            flex: 1 1 (100% / 7);
+            height: (100% / 6);
+            text-align: right;
+        }
+    }
+
+    &.calendar-months {
+        & > * {
+            flex: 1 1 (100% / 4);
+            height: (100% / 3);
+            text-align: center;
+        }
+    }
+
+    &.calendar-years {
+        & > * {
+            flex: 1 1 (100% / 4);
+            height: (100% / 3);
+            text-align: center;
+        }
+    }
+}
+
+.calendar-item {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 4px;
+
+    span {
+        flex: 1;
+    }
+
+    &:hover:not(.selected) {
+        background-color: #f2f7fd;
+        border: 1px solid #b8d6fb;
+        cursor: pointer;
+    }
+
+    &.grayed {
+        color: gray;
+    }
+
+    &.selected {
+        background-color: #dcebfc;
+        border: 1px solid #b8d6fb;
+        cursor: pointer;
+    }
+
+    &.today {
+        border: 1px solid #b8d6fb;
+    }    
+}

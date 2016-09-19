@@ -1,0 +1,40 @@
+<div class="table-header" *ngIf="header" [style.padding-right.px]="_scrollPaddingRight">
+    <div *ngFor="let column of columns" class="table-cell table-header-cell {{column.class}}" (click)="headerClick(column, $event)"
+        [class.sort-asc]="column.sort == 'asc'" [class.sort-desc]="column.sort == 'desc'" [class.sort-none]="column.sort == 'none'"
+        [attr.name]="column.name" [style.max-width]="column.maxWidth" [style.min-width]="column.minWidth">
+        <div class="table-header-cell-content">
+            <template *ngIf="column.headerData" [ngTemplateOutlet]="column.headerData.templateRef"></template>
+            <span *ngIf="column.headerData == null">{{column.header}}</span>
+        </div>
+        <i *ngIf="column.sort == 'asc'" class="sort-asc"></i>
+        <i *ngIf="column.sort == 'desc'" class="sort-desc"></i>
+    </div>
+</div>
+<div class="table-data" #dataElem [scroll-top]="_dataScrollTop" (scroll-top)="_dataScrollTop = $event">
+    <div class="table-row" *ngFor="let row of _rows" (click)="rowClick(row)" [class.selected]="row == selectedRow">
+        <div *ngFor="let column of columns" class="table-cell {{column.class}}" [attr.name]="column.name" [style.max-width]="column.maxWidth"
+            [style.min-width]="column.minWidth">
+            <template *ngIf="column.cellData" [ngTemplateOutlet]="column.cellData.templateRef" [ngOutletContext]="{ $implicit: row }"></template>
+            <span *ngIf="column.cellData == null">{{row[column.name]}}</span>
+        </div>
+    </div>
+</div>
+<div class="table-footer" *ngIf="footer" [style.padding-right.px]="_scrollPaddingRight">
+    <div *ngFor="let column of columns" class="table-cell table-footer-cell {{column.class}}" [attr.name]="column.name" [style.max-width]="column.maxWidth"
+        [style.min-width]="column.minWidth">
+        <template *ngIf="column.footerData" [ngTemplateOutlet]="column.footerData.templateRef"></template>
+    </div>
+</div>
+<div class="table-status-bar" *ngIf="statusText || _pageCount > 1">
+    <div class="table-status">
+        <template *ngIf="statusText" [ngTemplateOutlet]="statusText.templateRef"></template>
+    </div>
+    <div class="table-progress" [class.is-loading]="_service.isLoading | async">
+
+    </div>
+    <div class="table-pager" *ngIf="_pageCount > 1">
+        <span class="table-page-prev" [class.button-disabled]="isFirstPage" (click)="previousPage()"></span>
+        <span class="table-page">{{page}} / {{_pageCount}}</span>
+        <span class="table-page-next" [class.button-disabled]="isLastPage" (click)="nextPage()"></span>
+    </div>
+</div>

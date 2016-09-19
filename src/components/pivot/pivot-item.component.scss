@@ -1,0 +1,27 @@
+@import "../../styles/theme";
+
+:host {
+    color: #757575;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 16px 0 0;
+
+    &.pivot-item-selected {
+        color: $primary700;
+        font-weight: 600;
+    }
+}
+
+:host-context(.tab-mode) {
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+
+    &.pivot-item-selected {
+        border-bottom: 2px solid $primary700;
+        color: $primary700;
+        font-weight: 500;
+        padding: 10px 10px 9px 10px;
+    }
+}

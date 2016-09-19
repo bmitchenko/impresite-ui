@@ -1,0 +1,97 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>numeric-edit</h1>
+    </header>
+    <div class="component-playground">
+        <numeric-edit></numeric-edit>
+        <!--<h3>Set</h3>
+        <check-box>remember me</check-box>
+        <h3>Array</h3>
+        <check-box mode="push" [(value)]="pushValue" [checked-value]="1">Item 1</check-box>
+        <check-box mode="push" [(value)]="pushValue" [checked-value]="2">Item 2</check-box>
+        <check-box mode="push" [(value)]="pushValue" [checked-value]="3">Item 3</check-box>
+        <check-box mode="push" [(value)]="pushValue" [checked-value]="4">Item 4</check-box>
+        <check-box mode="push" [(value)]="pushValue" [checked-value]="5">Item 5</check-box>
+        <div class="component-value">
+            Value: {{pushValueText}}
+        </div>
+
+        <h3>Flags</h3>
+        <check-box mode="flag" [(value)]="flagValue" [checked-value]="1">Item 1</check-box>
+        <check-box mode="flag" [(value)]="flagValue" [checked-value]="2">Item 2</check-box>
+        <check-box mode="flag" [(value)]="flagValue" [checked-value]="4">Item 4</check-box>
+        <check-box mode="flag" [(value)]="flagValue" [checked-value]="8">Item 8</check-box>
+        <check-box mode="flag" [(value)]="flagValue" [checked-value]="16">Item 16</check-box>
+        <div class="component-value">
+            Value: {{flagValue}}
+        </div>-->
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td><check-box [checked]="numericEdit.autofocus"></check-box></td>
+            </tr>
+            <tr>
+                <td>decimals</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="numericEdit.decimals" [min]="0" [max]="17"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="numericEdit.enabled"></check-box></td>
+            </tr>
+            <tr>
+                <td>increment</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="numericEdit.increment"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>max</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="numericEdit.max"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>min</td>
+                <td>[]</td>
+                <td><numeric-edit [(value)]="numericEdit.min"></numeric-edit></td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td><text-box [(text)]="numericEdit.placeholder"></text-box></td>
+            </tr>
+            <tr>
+                <td>readOnly</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="numericEdit.readOnly"></check-box></td>
+            </tr>
+            <tr>
+                <td>suffix</td>
+                <td>[]</td>
+                <td><text-box [(text)]="numericEdit.suffix"></text-box></td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td><numeric-edit [(value)]="numericEdit.value"></numeric-edit></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre>
+            <code>
+&lt;numeric-edit&gt;&lt;/numeric-edit&gt;
+        </code>
+        </pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

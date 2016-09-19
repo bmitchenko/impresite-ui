@@ -1,0 +1,26 @@
+:host {
+    width: 400px;
+}
+
+.field {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 0 8px 0;
+    width: 100%;
+
+    & > * {
+        width: auto;
+    }
+
+    label {
+        font-family: 'Roboto';
+        font-size: 12px;
+        margin: 0;
+        padding: 8px 0 8px 0;
+    }
+}
+
+error-list {
+    display: block;
+}

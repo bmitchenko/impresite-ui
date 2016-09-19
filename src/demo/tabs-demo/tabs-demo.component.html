@@ -1,0 +1,94 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>tabs</h1>
+    </header>
+    <div class="component-playground">
+        <tabs [selectedIndex]="0">
+            <tab>
+                <template tab-label>Text header</template>
+                <template tab-content>
+                    <p>Mel ad erat dissentias definitionem. Nec nemore abhorreant ne, putant admodum ex pro, an magna simul
+                        mei. Ei eos tale vivendo delicatissimi, eu eam velit eripuit facilisi. No perfecto definitionem pri,
+                        te mel sanctus urbanitas, consul electram ea quo.</p>
+                    <p>Decore commodo percipit ut vim. Usu nisl verear suavitate no, nec no putent impedit nostrum, eu minim
+                        malorum vel. Illum deserunt mei an. Oblique officiis adversarium has no. Per constituam reformidans
+                        intellegebat no, in etiam quodsi eos. Tale saepe tractatos nam no, vis ea aliquando cotidieque.</p>
+                </template>
+            </tab>
+            <tab>
+                <template tab-label><strong>Bold header</strong></template>
+                <template tab-content>
+                    <p>Lorem ipsum dolor sit amet, sed ne ipsum instructior. Eum habeo vituperata ne, ad mea choro vitae dissentiet.
+                        Eu pro sint soluta vituperatoribus. Ut aeterno ornatus vituperatoribus quo, mea cu ipsum verear virtute.
+                        Has graecis volutpat te, per quas epicurei ad.</p>
+                    <p>Mel ad erat dissentias definitionem. Nec nemore abhorreant ne, putant admodum ex pro, an magna simul
+                        mei. Ei eos tale vivendo delicatissimi, eu eam velit eripuit facilisi. No perfecto definitionem pri,
+                        te mel sanctus urbanitas, consul electram ea quo.</p>
+                    <p>Apeirian consequat efficiantur vis id, ex ludus tantas eam. Ea alienum intellegat persequeris eam, eam
+                        vide assum eu. His modo quodsi inciderint no, vero iusto eleifend sed eu. Cum vocent nominavi insolens
+                        te, cu cum facer partem liberavisse, ius an vidit aeque consulatu.</p>
+                    <p>Qui posse offendit te, in legere pericula qui, eu commodo complectitur qui. Qui sonet accommodare no,
+                        mel aeque persecuti ut, augue omittam deterruisset est at. Primis laboramus qui te. Hinc scripta
+                        consulatu in sit, viderer maiestatis consectetuer an sit. No euripidis interpretaris pro, et ridens
+                        docendi sit. Ut fugit ridens consequat pro, sea assum admodum sensibus ex, sit sint maiorum suscipit
+                        ei. Et eam perfecto convenire, illum lobortis cu has, ei vidit zril quaestio vel.</p>
+                    <p>Decore commodo percipit ut vim. Usu nisl verear suavitate no, nec no putent impedit nostrum, eu minim
+                        malorum vel. Illum deserunt mei an. Oblique officiis adversarium has no. Per constituam reformidans
+                        intellegebat no, in etiam quodsi eos. Tale saepe tractatos nam no, vis ea aliquando cotidieque.</p>
+                </template>
+            </tab>
+            <tab>
+                <template tab-label><img src="../../icons/windows-10/search-16.png" /> Header with icon</template>
+                <template tab-content>
+                    <p>Apeirian consequat efficiantur vis id, ex ludus tantas eam. Ea alienum intellegat persequeris eam, eam
+                        vide assum eu. His modo quodsi inciderint no, vero iusto eleifend sed eu. Cum vocent nominavi insolens
+                        te, cu cum facer partem liberavisse, ius an vidit aeque consulatu.</p>
+                    <p>Qui posse offendit te, in legere pericula qui, eu commodo complectitur qui. Qui sonet accommodare no,
+                        mel aeque persecuti ut, augue omittam deterruisset est at. Primis laboramus qui te. Hinc scripta
+                        consulatu in sit, viderer maiestatis consectetuer an sit. No euripidis interpretaris pro, et ridens
+                        docendi sit. Ut fugit ridens consequat pro, sea assum admodum sensibus ex, sit sint maiorum suscipit
+                        ei. Et eam perfecto convenire, illum lobortis cu has, ei vidit zril quaestio vel.</p>
+                    <p>Decore commodo percipit ut vim. Usu nisl verear suavitate no, nec no putent impedit nostrum, eu minim
+                        malorum vel. Illum deserunt mei an. Oblique officiis adversarium has no. Per constituam reformidans
+                        intellegebat no, in etiam quodsi eos. Tale saepe tractatos nam no, vis ea aliquando cotidieque.</p>
+                </template>
+            </tab>
+        </tabs>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>selectedIndex</td>
+                <td>[()]</td>
+                <td><numeric-edit [(value)]="tabs.selectedIndex" [min]="0" [max]="2"></numeric-edit></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre>
+            <code>
+&lt;tabs [selected-index]=&quot;0&quot;&gt;
+    &lt;tab&gt;
+        &lt;template tab-label&gt;Tab 1&lt;/template&gt;
+        &lt;template tab-content&gt;Tab 1 content.&lt;/template&gt;
+    &lt;/tab&gt;
+    &lt;tab&gt;
+        &lt;template tab-label&gt;Tab 2&lt;/template&gt;
+        &lt;template tab-content&gt;Tab 2 content.&lt;/template&gt;
+    &lt;/tab&gt;
+    &lt;tab&gt;
+        &lt;template tab-label&gt;Tab 3&lt;/template&gt;
+        &lt;template tab-content&gt;Tab 3 content.&lt;/template&gt;
+    &lt;/tab&gt;
+&lt;/tabs&gt;
+        </code>
+        </pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<modal-window>
+    <header>Registration</header>
+    <main>
+        <div class="field">
+            <label>User name</label>
+            <text-box [autofocus]="true" [(text)]="userName"></text-box>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <text-box [usePasswordChar]="true" [(text)]="password"></text-box>
+        </div>
+        <error-list [errors]="validationErrors"></error-list>        
+    </main>
+    <footer>
+        <flat-button (click)="registerClick()" class="primary">Register</flat-button>
+        <flat-button (click)="cancelClick()">Cancel</flat-button>
+    </footer>
+</modal-window>

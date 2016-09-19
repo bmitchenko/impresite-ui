@@ -1,0 +1,10 @@
+<input #inputElement class="autocomplete-input" type="text" [(ngModel)]="text" [attr.placeholder]="getPlaceholderText()"
+    [class.focus]="_hostFocused" [disabled]="disabled" (keydown)="onKeyDown($event)" />
+
+<popup class="autocomplete-popup" [targetWidth]="true" position="bottom" [scroll-top] [visible]="popupVisible" tabindex="-1">
+    <div *ngFor="let item of _popupItems; let i = index" (click)="itemClick(item)" (mouseenter)="setActiveItemIndex(i)" class="autocomplete-item"
+        [class.active]="_activeItemIndex == i">
+        <template *ngIf="itemTemplate" [ngTemplateOutlet]="itemTemplate" [ngOutletContext]="{ $implicit: item }"></template>
+        <span *ngIf="itemTemplate == null" [innerHTML]="getHighlightedItemText(item)"></span>
+    </div>
+</popup>

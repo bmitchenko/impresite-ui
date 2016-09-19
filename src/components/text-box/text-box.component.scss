@@ -1,0 +1,16 @@
+@import "../../styles/theme";
+@import "../../styles/input-base";
+
+:host {
+    display: inline-block;
+    height: $input-height;
+    vertical-align: bottom;
+    width: 300px;
+}
+
+.text-box-input {
+    @extend .input-base;
+
+    height: 100%;
+    width: 100%;
+}

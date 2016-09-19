@@ -1,0 +1,37 @@
+@import "../../styles/theme";
+
+:host {
+    background-color: #f9f9f9;
+    box-shadow: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
+    display: block;
+    //max-width: 90%;    
+}
+
+.modal-window-content {
+    padding: 24px;
+
+    &.with-title {
+        .modal-window-title {
+            display: block;
+        }        
+    }
+}
+
+.modal-window-title {
+    display: none;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+}
+
+.modal-window-footer {
+    padding: 8px;
+    text-align: right;
+
+    /deep/ footer {
+        display: block;
+
+        flat-button {
+            margin: 0 0 0 8px;
+        }
+    }
+}

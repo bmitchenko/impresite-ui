@@ -1,0 +1,21 @@
+:host {
+    
+}
+
+.field {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 0 8px 0;
+
+    label {
+        font-family: 'Roboto';
+        font-size: 12px;
+        margin: 0;
+        padding: 8px 0 8px 0;
+    }
+}
+
+error-list {
+    margin: 8px 0 8px 0;
+}

@@ -1,0 +1,55 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>pivot</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <pivot [(selectedIndex)]="selectedIndex" [(value)]="value">
+                <pivot-item value="employees">Employees (10)</pivot-item>
+                <pivot-item value="customers">Customers (50)</pivot-item>
+                <pivot-item value="users">Users</pivot-item>
+            </pivot>
+        </section>
+        <section>
+            <h3>Tab mode</h3>
+            <pivot class="tab-mode">
+                <pivot-item value="employees">Employees (10)</pivot-item>
+                <pivot-item value="customers">Customers (50)</pivot-item>
+                <pivot-item value="users">Users</pivot-item>
+            </pivot>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>selectedIndex</td>
+                <td>[()]</td>
+                <td>
+                    <numeric-edit [(value)]="pivot.selectedIndex" [min]="-1" [max]="2"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td>
+                    <combo-box [items]="['employees', 'customers', 'users']" [(selectedItem)]="pivot.value"></combo-box>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;pivot [(selectedIndex)]=&quot;selectedIndex&quot; [(value)]=&quot;value&quot;&gt;
+    &lt;pivot-item value=&quot;employees&quot;&gt;Employees (10)&lt;/pivot-item&gt;
+    &lt;pivot-item value=&quot;customers&quot;&gt;Customers (50)&lt;/pivot-item&gt;
+    &lt;pivot-item value=&quot;users&quot;&gt;Users&lt;/pivot-item&gt;
+&lt;/pivot&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+        .tab-mode
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

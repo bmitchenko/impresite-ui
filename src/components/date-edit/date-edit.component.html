@@ -1,0 +1,9 @@
+<div class="date-edit-input-container">
+    <input #inputElement class="date-edit-input" type="text" [(ngModel)]="text" [placeholder]="placeholderText" [readonly]="readOnly"
+        [attr.disabled]="disabled" />
+</div>
+<div class="date-edit-button" (click)="buttonClick()"></div>
+
+<popup class="date-edit-popup" position="bottom left" tabindex="-1">
+    <calendar [(date)]="value" (dateSelected)="calendarDateSelected($event)"></calendar>
+</popup>

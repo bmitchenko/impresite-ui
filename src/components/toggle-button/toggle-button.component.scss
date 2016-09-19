@@ -1,0 +1,8 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: row wrap;
+    min-height: $input-height;
+}

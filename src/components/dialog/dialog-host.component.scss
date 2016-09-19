@@ -1,0 +1,28 @@
+:host {
+}
+
+:host /deep/ .dialog-open > *:not(a) {
+    left: 50%;
+    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog-overlay {
+    background-color: rgba(100, 100, 100, 0.1);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    &.visible {
+        display: block;
+    }
+}
+
+a {
+    display: none;
+}

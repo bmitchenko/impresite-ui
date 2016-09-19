@@ -1,0 +1,8 @@
+<div class="tab-labels">
+    <div class="tab-label" [class.active]="tab == activeTab" (click)="tabLabelClick(tab)" *ngFor="let tab of tabs">
+        <template [ngTemplateOutlet]="tab.label.templateRef"></template>
+    </div>
+</div>
+<div class="tab-content">
+    <template *ngIf="activeTab" [ngTemplateOutlet]="activeTab.content.templateRef"></template>
+</div>

@@ -1,0 +1,40 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>list</h1>
+    </header>
+    <div class="component-playground">
+        <list>
+            <template let-item>
+                <strong>{{item.firstName}} {{item.lastName}}</strong><br />{{item.company}}
+            </template>
+        </list>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>items</td>
+                <td>[]</td>
+                <td>[array of object]</td>
+            </tr>
+            <tr>
+                <td>selectedItem</td>
+                <td>[()]</td>
+                <td>{{list.selectedItem}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;list&gt;
+    &lt;template let-item&gt;
+        &lt;strong&gt;{{item.firstName}} {{item.lastName}}&lt;/strong&gt;&lt;br /&gt;{{item.company}}
+    &lt;/template&gt;
+&lt;/list&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

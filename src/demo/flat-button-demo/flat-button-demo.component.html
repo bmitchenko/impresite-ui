@@ -1,0 +1,42 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>flat-button</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <flat-button>Flat</flat-button>
+            <flat-button class="primary">Flat Primary</flat-button>
+            <flat-button class="warn">Flat Warn</flat-button>
+            <flat-button [enabled]="false">Disabled</flat-button>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>click</td>
+                <td>()</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="flatButton.enabled"></check-box></td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code>&lt;flat-button&gt;Default&lt;/button&gt;
+&lt;flat-button class=&quot;primary&quot;&gt;Primary&lt;/button&gt;
+&lt;flat-button class=&quot;warn&quot;&gt;Warn&lt;/button&gt;
+&lt;falt-button [enabled]=&quot;false&quot;&gt;Disabled&lt;/button&gt;
+</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+        <pre><code>.primary, .warn</code></pre>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

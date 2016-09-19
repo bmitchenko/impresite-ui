@@ -1,0 +1,30 @@
+@import "../../styles/theme";
+
+:host {
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
+:host:last-child .breadcrumb-splitter {
+    display: none;
+}
+
+a {
+    color: $primary700;
+    font-size: 14px;
+    text-decoration: none;
+
+    &.active {
+        color: #000;
+        cursor: default;
+    }
+}
+
+.breadcrumb-splitter {
+    background: url($breadcrump-splitter-icon) center center no-repeat;
+    display: inline-block;
+    height: 16px;
+    opacity: 0.5;
+    width: 20px;
+}

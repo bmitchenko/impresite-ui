@@ -1,0 +1,59 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>tree</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <tree>
+                <template let-node>
+                    {{node.text}}
+                </template>
+            </tree>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>nodesProperty</td>
+                <td>[]</td>
+                <td><text-box [(text)]="tree.nodesProperty"></text-box></td>
+            </tr>
+            <tr>
+                <td>load</td>
+                <td>[]</td>
+                <td ngNonBindable>(node: any): Promise&lt;any[]&gt;</td>
+            </tr>
+            <tr>
+                <td>nodes</td>
+                <td>[]</td>
+                <td ngNonBindable>any[]</td>
+            </tr>
+            <tr>
+                <td>selectableGroups</td>
+                <td>[]</td>
+                <td><check-box [(checked)]="tree.selectableGroups"></check-box></td>
+            </tr>
+            <tr>
+                <td>selectedNode</td>
+                <td>[()]</td>
+                <td>
+                    {{tree.selectedNode}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;tree&gt;
+    &lt;template let-node&gt;
+        {{node.text}}
+    &lt;/template&gt;
+&lt;/tree&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

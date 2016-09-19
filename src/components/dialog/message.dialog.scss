@@ -1,0 +1,38 @@
+@import "../../styles/theme";
+
+:host {
+    // flex: 0 1 640px;
+    // max-width: 90%;    
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+i {
+    background-position: left top;
+    background-repeat: no-repeat;
+    flex: 0 0 68px;
+    height: 48px;
+}
+
+.message-dialog-validation-error {
+    margin: 0 0 4px 0;
+}
+
+.message-dialog-info-icon {
+    background-image: url($message-info-icon);
+}
+
+.message-dialog-error-icon {
+    background-image: url($message-error-icon);
+}
+
+.message-dialog-question-icon {
+    background-image: url($message-question-icon);
+}
+
+.message-dialog-warning-icon {
+    background-image: url($message-warning-icon);
+}

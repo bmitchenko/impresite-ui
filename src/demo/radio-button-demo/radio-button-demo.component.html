@@ -1,0 +1,70 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>radio-button</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <radio-button [(value)]="value" [checkedValue]="1">Item 1</radio-button>
+            <radio-button [(value)]="value" [checkedValue]="2">Item 2</radio-button>
+            <radio-button [(value)]="value" [checkedValue]="3">Item 3</radio-button>
+            <radio-button [(value)]="value" [checkedValue]="4">Item 4</radio-button>
+            <radio-button [(value)]="value" [checkedValue]="5">Item 5</radio-button>
+            <div class="component-value">
+                Value: {{valueText}}
+            </div>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="radioButton.autofocus"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>checked</td>
+                <td>[()]</td>
+                <td>
+                    <check-box [(checked)]="radioButton.checked"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>checkedValue</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="radioButton.checkedValue"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="radioButton.enabled"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>[()]</td>
+                <td>
+                    <numeric-edit [(value)]="radioButton.value" [min]="1" [max]="5"></numeric-edit>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre><code ngNonBindable>&lt;radio-button [(value)]=&quot;value&quot; [checkedValue]=&quot;1&quot;&gt;Item 1&lt;/radio-button&gt;
+&lt;radio-button [(value)]=&quot;value&quot; [checkedValue]=&quot;2&quot;&gt;Item 2&lt;/radio-button&gt;
+&lt;radio-button [(value)]=&quot;value&quot; [checkedValue]=&quot;3&quot;&gt;Item 3&lt;/radio-button&gt;
+&lt;radio-button [(value)]=&quot;value&quot; [checkedValue]=&quot;4&quot;&gt;Item 4&lt;/radio-button&gt;
+&lt;radio-button [(value)]=&quot;value&quot; [checkedValue]=&quot;5&quot;&gt;Item 5&lt;/radio-button&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

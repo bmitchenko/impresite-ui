@@ -1,0 +1,119 @@
+<div class="component-demo-layout">
+    <header>
+        <h1>autocomplete</h1>
+    </header>
+    <div class="component-playground">
+        <section>
+            <h3>Array datasource</h3>
+            <autocomplete></autocomplete>
+        </section>
+        <section>
+            <h3>Array datasource with custom template</h3>
+            <autocomplete [items]="customers" [displayMember]="getCustomerName">
+                <template let-item>
+                    <strong>{{item.firstName}} {{item.lastName}}</strong><br /> {{item.phone}}
+                </template>
+            </autocomplete>
+        </section>
+        <section>
+            <h3>Remote datasource emulation with 500ms delay</h3>
+            <autocomplete [items]="remoteDatasource" displayMember="name"></autocomplete>
+        </section>
+    </div>
+    <div class="component-properties">
+        <table>
+            <tr>
+                <td>autofocus</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="autocomplete.autofocus"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>autoselect</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="autocomplete.autoselect"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>buffer</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="autocomplete.buffer"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>displayMember</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="autocomplete.displayMember"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>dropDownCount</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="autocomplete.dropDownCount"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>enabled</td>
+                <td>[]</td>
+                <td>
+                    <check-box [(checked)]="autocomplete.enabled"></check-box>
+                </td>
+            </tr>
+            <tr>
+                <td>items</td>
+                <td>[]</td>
+                <td>array of (id: number, name: string)</td>
+            </tr>
+            <tr>
+                <td>minLength</td>
+                <td>[]</td>
+                <td>
+                    <numeric-edit [(value)]="autocomplete.minLength"></numeric-edit>
+                </td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>[]</td>
+                <td>
+                    <text-box [(text)]="autocomplete.placeholder"></text-box>
+                </td>
+            </tr>
+            <tr>
+                <td>selectedItem</td>
+                <td>[()]</td>
+                <td>{{autocomplete.selectedItem}}</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>[()]</td>
+                <td>
+                    <text-box [(text)]="autocomplete.text"></text-box>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="component-markup">
+        <h2>HTML</h2>
+        <pre ngNonBindable><code>&lt;autocomplete&gt;&lt;/autocomplete&gt;
+
+&lt;autocomplete [items]=&quot;customers&quot; [displayMember]=&quot;getCustomerName&quot;&gt;
+    &lt;template let-item&gt;
+        &lt;strong&gt;&#123;&#123;item.firstName&#125;&#125; &#123;&#123;item.lastName&#125;&#125;&lt;/strong&gt;&lt;br /&gt;
+        &#123;&#123;item.phone&#125;&#125;
+    &lt;/template&gt;
+&lt;/autocomplete&gt;
+
+&lt;autocomplete [items]=&quot;remoteDatasource&quot; displayMember=&quot;name&quot;&gt;&lt;/autocomplete&gt;</code></pre>
+    </div>
+    <div class="component-style">
+        <h2>Style</h2>
+    </div>
+    <div class="component-docs">
+        <h2>Docs</h2>
+    </div>
+</div>

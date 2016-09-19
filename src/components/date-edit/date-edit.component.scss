@@ -1,0 +1,64 @@
+@import "../../styles/theme";
+@import "../../styles/input-base";
+
+:host {
+    @extend .input-base;
+
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    height: $input-height;
+    padding: 0;
+    width: 150px;
+
+    &[disabled], &.readonly {
+        .date-edit-button {
+            opacity: 0.1;
+        }
+
+        .date-edit-button {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.date-edit-input-container {
+    align-self: stretch;
+    flex: 1;
+}
+
+.date-edit-input {
+    @extend .input-base;
+
+    border: 0;
+    height: 100%;
+    padding: $input-padding;
+    width: 100%;
+
+    &:focus, &:hover, &[disabled] {
+        border: 0;
+        outline: 0;
+    }
+
+    &::-ms-clear { 
+        display:none; 
+    }
+}
+
+.date-edit-button {
+    background-position: center center;
+    background-image: url($date-edit-button-icon);
+    background-repeat: no-repeat;
+    flex: 0 0 24px;
+    opacity: 0.8;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.date-edit-popup {
+    outline: 0;
+}

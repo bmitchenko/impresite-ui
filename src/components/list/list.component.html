@@ -1,0 +1,5 @@
+<div class="list-container" [scroll-top] (keydown)="keyDown($event)" tabindex="0">
+    <div *ngFor="let item of items" (click)="itemClick(item)" class="list-item" [class.selected]="item == selectedItem">
+        <template *ngIf="itemTemplate" [ngTemplateOutlet]="itemTemplate" [ngOutletContext]="{ $implicit: item }"></template>
+    </div>
+</div>

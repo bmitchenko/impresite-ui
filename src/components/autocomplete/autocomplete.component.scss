@@ -1,0 +1,43 @@
+@import "../../styles/theme";
+@import "../../styles/input-base";
+@import "../../styles/drop-down-base";
+@import "../../styles/list-item-base";
+
+:host {
+    align-items: stretch;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    outline: 0;
+    vertical-align: bottom;
+    width: 300px;
+}
+
+/deep/ mark {
+     background-color: $accent100;
+     font-weight: 600;
+}
+
+.autocomplete-input {
+    @extend .input-base;
+
+    background: url($autocomplete-search-icon) right 8px center no-repeat;
+    flex: 1;
+    padding-right: 32px;
+
+    &[disabled] {
+        background: url($autocomplete-search-icon-disabled) right 8px center no-repeat;
+    }
+}
+
+.autocomplete-popup {
+    @extend .drop-down-base;
+
+    max-height: 300px;
+    outline: 0;
+    overflow: auto;
+    padding: 1px;
+}
+
+.autocomplete-item {
+    @extend .list-item-base;    
+}
