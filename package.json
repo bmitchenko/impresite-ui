@@ -1,6 +1,6 @@
 {
   "name": "impresite-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "UI Components for Angular2",
   "main": "index.js",
   "scripts": {
