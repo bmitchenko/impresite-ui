@@ -1,5 +1,6 @@
 import { Component, ComponentRef, HostBinding, ViewChild, Type, ComponentFactoryResolver, ViewRef, ComponentFactory, Directive, ViewContainerRef, Renderer } from "@angular/core";
 import { ElementRef } from "@angular/core";
+import '../../rxjs-operators';
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
 import { Subscription } from "rxjs/Subscription";
@@ -7,9 +8,6 @@ import { Subscription } from "rxjs/Subscription";
 import { DialogService } from "./dialog.service";
 import { IDialogHost } from "./dialog-host";
 import { IDialog } from "./dialog";
-
-import * as template from "./dialog-host.component.html";
-import * as styles from "./dialog-host.component.scss";
 
 const DialogZIndex = 1000;
 
@@ -23,8 +21,8 @@ interface IOpenDialog {
 
 @Component({
     selector: 'dialog-host',
-    styles: [styles],
-    template: template
+    styleUrls: ['./dialog-host.component.scss'],
+    templateUrl: './dialog-host.component.html'
 })
 export class DialogHostComponent implements IDialogHost {
     private _dialogClicked = false;
@@ -49,9 +47,9 @@ export class DialogHostComponent implements IDialogHost {
         let component = this._viewContainer.createComponent(componentFactory);
 
         if (params != undefined) {
-            Object.getOwnPropertyNames(params).forEach((propertyName) => {
-                component.instance[propertyName] = params[propertyName];
-            });
+            if (component.instance.onInit != undefined) {
+                component.instance.onInit(params);
+            }
         }
 
         let clickListener = this._renderer.listen(component.location.nativeElement, 'click', () => {
@@ -123,7 +121,7 @@ export class DialogHostComponent implements IDialogHost {
             return;
         }
 
-        this.closeDialog( this._openDialogs[this._openDialogs.length - 1].component.instance);
+        this.closeDialog(this._openDialogs[this._openDialogs.length - 1].component.instance);
     }
 
     private updateOverlay(): void {

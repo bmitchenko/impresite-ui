@@ -43,3 +43,5 @@ export { YandexMapComponent } from './src/components/yandex-map/yandex-map.compo
 
 export { FocusedDirective } from './src/directives/focused.directive';
 export { ScrollTopDirective } from './src/directives/scroll-top.directive';
+
+export { ImpresiteUiModule } from './src/impresite-ui.module';

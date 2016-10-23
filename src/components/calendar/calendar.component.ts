@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from './calendar.component.html';
-import * as styles from "./calendar.component.scss";
-
 @Component({
     selector: 'calendar',
-    styles: [styles],
-    template: template
+    styleUrls: ['./calendar.component.scss'],
+    templateUrl: './calendar.component.html'
 })
 export class CalendarComponent {
     private _dayMilliseconds: number = 1000 * 60 * 60 * 24;

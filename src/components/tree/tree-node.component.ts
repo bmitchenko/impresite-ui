@@ -2,9 +2,6 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild, ViewChildren } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./tree-node.component.html";
-import * as styles from "./tree-node.component.scss";
-
 export interface ITreeNode {
     expanded?: boolean;
     nodes?: ITreeNode[];
@@ -14,8 +11,8 @@ export interface ITreeNode {
 
 @Component({
     selector: 'tree-node',
-    styles: [styles],
-    template: template
+    styleUrls: ['./tree-node.component.scss'],
+    templateUrl: './tree-node.component.html'
 })
 export class TreeNodeComponent {
     private _clickCallback: { (node: TreeNodeComponent): void };

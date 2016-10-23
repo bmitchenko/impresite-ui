@@ -5,13 +5,10 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { ToggleButtonOptionComponent } from './toggle-button-option.component';
 
-import * as template from "./toggle-button.component.html";
-import * as styles from "./toggle-button.component.scss";
-
 @Component({
     selector: 'toggle-button',
-    styles: [styles],
-    template: template
+    styleUrls: ['./toggle-button.component.scss'],
+    templateUrl: './toggle-button.component.html'
 })
 export class ToggleButtonComponent implements OnInit, AfterViewInit {
     private _initialized = false;

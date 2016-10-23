@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./yandex-map.component.html";
-import * as styles from "./yandex-map.component.scss";
-
 @Component({
     selector: 'yandex-map',
-    styles: [styles],
-    template: template
+    styleUrls: ['./yandex-map.component.scss'],
+    templateUrl: './yandex-map.component.html'
 })
 export class YandexMapComponent implements OnInit, AfterViewInit {
     private _hostElement: ElementRef;

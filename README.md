@@ -27,3 +27,6 @@ Angular2 UI Components
 
 ## Demo
 [Live demo](http://ui.impresite.ru)
+
+## License
+MIT

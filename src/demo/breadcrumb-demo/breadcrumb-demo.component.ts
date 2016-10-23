@@ -3,13 +3,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { BreadcrumbComponent, BreadcrumbItem } from '../../components/breadcrumb/breadcrumb.component';
 import { Data } from '../../test-data';
 
-import * as template from "./breadcrumb-demo.component.html";
-import * as styles from "./breadcrumb-demo.component.scss";
-
 @Component({
     selector: 'breadcrumb-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./breadcrumb-demo.component.scss'],
+    templateUrl: './breadcrumb-demo.component.html'
 })
 export class BreadcrumbDemoComponent {
     @ViewChild(BreadcrumbComponent)

@@ -4,13 +4,10 @@ import { OnInit, AfterViewInit } from '@angular/core';
 
 import { ScrollTopDirective } from '../../directives/scroll-top.directive';
 
-import * as template from "./list.component.html";
-import * as styles from "./list.component.scss";
-
 @Component({
     selector: 'list',
-    styles: [styles],
-    template: template
+    styleUrls: ['./list.component.scss'],
+    templateUrl: './list.component.html'
 })
 export class ListComponent implements OnInit {
     private _initialized = false;

@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 import { ProgressBarComponent } from '../../components/progress-bar/progress-bar.component';
 
-import * as template from "./progress-bar-demo.component.html";
-import * as styles from "./progress-bar-demo.component.scss";
-
 @Component({
     selector: 'progress-bar-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./progress-bar-demo.component.scss'],
+    templateUrl: './progress-bar-demo.component.html'
 })
 export class ProgressBarDemoComponent implements AfterViewInit {
     @ViewChild(ProgressBarComponent)

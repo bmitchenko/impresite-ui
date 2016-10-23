@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 
-import * as template from "./numeric-edit.component.html";
-import * as styles from "./numeric-edit.component.scss";
-
 @Component({
     selector: 'numeric-edit',
-    styles: [styles],
-    template: template
+    styleUrls: ['./numeric-edit.component.scss'],
+    templateUrl: './numeric-edit.component.html'
 })
 export class NumericEditComponent implements OnInit, AfterViewInit, OnDestroy {
     private _autofocus: boolean = false;

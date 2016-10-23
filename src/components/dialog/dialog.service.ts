@@ -1,4 +1,5 @@
 import { Compiler, Component, ComponentFactory, ComponentRef, Injectable, ViewContainerRef, ComponentFactoryResolver } from "@angular/core";
+import '../../rxjs-operators';
 import { Subscription } from 'rxjs/Subscription';
 
 import { IDialog } from './dialog';

@@ -3,13 +3,10 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ComboBoxComponent } from '../../components/combo-box/combo-box.component';
 import { Data } from '../../test-data';
 
-import * as componentTemplate from "./combo-box-demo.component.html";
-import * as componentStyles from "./combo-box-demo.component.scss";
-
 @Component({
     selector: 'combo-box-demo',
-    template: componentTemplate,
-    styles: [componentStyles]
+    styleUrls: ['./combo-box-demo.component.scss'],
+    templateUrl: './combo-box-demo.component.html'
 })
 export class ComboBoxDemoComponent implements AfterViewInit {
     private countries: any[];

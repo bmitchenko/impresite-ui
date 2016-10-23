@@ -4,13 +4,10 @@ import { DialogService } from '../../components/dialog/dialog.service';
 import { MessageDialog } from '../../components/dialog/message.dialog';
 import { RegistrationComponent } from './registration.component';
 
-import * as template from "./dialog-demo.component.html";
-import * as styles from "./dialog-demo.component.scss";
-
 @Component({
     selector: 'dialog-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./dialog-demo.component.scss'],
+    templateUrl: './dialog-demo.component.html',
 })
 export class DialogDemoComponent {
     constructor(private dialogService: DialogService) {

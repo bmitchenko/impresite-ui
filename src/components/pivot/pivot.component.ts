@@ -1,17 +1,15 @@
 import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Renderer, OnDestroy } from '@angular/core';
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
+import '../../rxjs-operators';
 import { Subscription } from 'rxjs/Subscription';
 
 import { PivotItemComponent } from './pivot-item.component';
 
-import * as template from "./pivot.component.html";
-import * as styles from "./pivot.component.scss";
-
 @Component({
     selector: 'pivot',
-    styles: [styles],
-    template: template
+    styleUrls: ['./pivot.component.scss'],
+    templateUrl: './pivot.component.html'
 })
 export class PivotComponent implements OnInit, AfterViewInit, OnDestroy {
     private _initialized = false;

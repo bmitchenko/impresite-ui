@@ -3,13 +3,10 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { AutocompleteComponent } from '../../components/autocomplete/autocomplete.component';
 import { Data } from '../../test-data';
 
-import * as template from "./autocomplete-demo.component.html";
-import * as styles from "./autocomplete-demo.component.scss";
-
 @Component({
     selector: 'autocomplete-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./autocomplete-demo.component.scss'],
+    templateUrl: './autocomplete-demo.component.html'
 })
 export class AutocompleteDemoComponent implements AfterViewInit {
 

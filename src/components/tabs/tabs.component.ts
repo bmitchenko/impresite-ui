@@ -6,13 +6,10 @@ import { TabContentDirective } from './tab-content.directive';
 import { TabLabelDirective } from './tab-label.directive';
 import { TabDirective } from './tab.directive';
 
-import * as template from "./tabs.component.html";
-import * as styles from "./tabs.component.scss";
-
 @Component({
     selector: 'tabs',
-    styles: [styles],
-    template: template
+    styleUrls: ['./tabs.component.scss'],
+    templateUrl: './tabs.component.html'
 })
 export class TabsComponent {
     private _selectedIndex = -1;

@@ -4,13 +4,10 @@ import { Data } from '../../test-data';
 import { DataTableComponent } from '../../components/data-table/data-table.component';
 import { ArrayDataSource } from '../../data/array-data-source';
 
-import * as componentTemplate from "./data-table-demo.component.html";
-import * as componentStyles from "./data-table-demo.component.scss";
-
 @Component({
     selector: 'data-table-demo',
-    template: componentTemplate,
-    styles: [componentStyles]
+    styleUrls: ['./data-table-demo.component.scss'],
+    templateUrl: './data-table-demo.component.html'
 })
 export class DataTableDemoComponent {
     public currentStatus = "Status text example.";

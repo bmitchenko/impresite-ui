@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./progress-bar.component.html";
-import * as styles from "./progress-bar.component.scss";
-
 @Component({
     selector: 'progress-bar',
-    styles: [styles],
-    template: template
+    styleUrls: ['./progress-bar.component.scss'],
+    templateUrl: './progress-bar.component.html'
 })
 export class ProgressBarComponent {
     private _max = 100;

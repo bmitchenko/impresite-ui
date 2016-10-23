@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import { DateEditComponent } from '../../components/date-edit/date-edit.component';
 
-import * as template from "./date-edit-demo.component.html";
-import * as styles from "./date-edit-demo.component.scss";
-
 @Component({
     selector: 'date-edit-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./date-edit-demo.component.scss'],
+    templateUrl: './date-edit-demo.component.html'
 })
 export class DateEditDemoComponent {
     @ViewChild(DateEditComponent)

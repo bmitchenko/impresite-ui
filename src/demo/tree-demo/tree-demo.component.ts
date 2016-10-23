@@ -4,13 +4,10 @@ import { TreeComponent } from '../../components/tree/tree.component';
 import { ITreeNode, TreeNodeComponent } from '../../components/tree/tree-node.component';
 import { Data } from '../../test-data';
 
-import * as template from "./tree-demo.component.html";
-import * as styles from "./tree-demo.component.scss";
-
 @Component({
     selector: 'tree-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./tree-demo.component.scss'],
+    templateUrl: './tree-demo.component.html'
 })
 export class TreeDemoComponent implements AfterViewInit {
     @ViewChild(TreeComponent)

@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./button.component.html";
-import * as styles from "./button.component.scss";
-
 @Component({
     selector: 'button',
-    styles: [styles],
-    template: template
+    styleUrls: ['./button.component.scss'],
+    templateUrl: './button.component.html'
 })
 export class ButtonComponent {
     private _enabled = true;

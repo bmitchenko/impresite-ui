@@ -4,13 +4,10 @@ import { OnInit, AfterViewInit } from '@angular/core';
 
 import { IDialog } from "./dialog";
 
-import * as template from "./modal-window.component.html";
-import * as styles from "./modal-window.component.scss";
-
 @Component({
     selector: 'modal-window',
-    styles: [styles],
-    template: template
+    styleUrls: ['./modal-window.component.scss'],
+    templateUrl: './modal-window.component.html'
 })
 export class ModalWindowComponent {
 }

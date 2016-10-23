@@ -5,13 +5,10 @@ import { OnInit, AfterViewInit } from '@angular/core';
 import { PopupComponent } from '../popup/popup.component';
 import { ScrollTopDirective } from '../../directives/scroll-top.directive';
 
-import * as comboBoxHtml from "./combo-box.component.html";
-import * as comboBoxStyles from "./combo-box.component.scss";
-
 @Component({
     selector: 'combo-box',
-    styles: [comboBoxStyles],
-    template: comboBoxHtml
+    styleUrls: ['./combo-box.component.scss'],
+    templateUrl: './combo-box.component.html'
 })
 export class ComboBoxComponent implements OnInit, AfterViewInit {
     private _activeItemIndex: number = -1;

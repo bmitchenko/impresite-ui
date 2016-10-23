@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./check-box.component.html";
-import * as styles from "./check-box.component.scss";
-
 @Component({
     selector: 'check-box',
-    styles: [styles],
-    template: template
+    styleUrls: ['./check-box.component.scss'],
+    templateUrl: './check-box.component.html'
 })
 export class CheckBoxComponent implements OnInit, AfterViewInit {
     private _autofocus = false;

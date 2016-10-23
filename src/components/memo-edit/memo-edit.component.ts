@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./memo-edit.component.html";
-import * as styles from "./memo-edit.component.scss";
-
 @Component({
     selector: 'memo-edit',
-    styles: [styles],
-    template: template
+    styleUrls: ['./memo-edit.component.scss'],
+    templateUrl: './memo-edit.component.html'
 })
 export class MemoEditComponent implements AfterViewInit {
     private _autofocus = false;

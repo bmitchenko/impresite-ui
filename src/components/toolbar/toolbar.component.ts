@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./toolbar.component.html";
-import * as styles from "./toolbar.component.scss";
-
 @Component({
     selector: 'toolbar',
-    styles: [styles],
-    template: template
+    styleUrls: ['./toolbar.component.scss'],
+    templateUrl: './toolbar.component.html'
 })
 export class ToolbarComponent implements OnInit, AfterViewInit {
     private _hostElement: ElementRef;

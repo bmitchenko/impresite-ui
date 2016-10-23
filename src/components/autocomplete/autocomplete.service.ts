@@ -127,7 +127,7 @@ export class AutocompleteService {
             .distinctUntilChanged()
             .debounceTime(this._buffer)
             .do(x => this._isLoadingSource.next(true))
-            .switchMap(x => this.queryItems(x))
+            .switchMap((x: ISearchParams) => this.queryItems(x))
             .do(x => this._isLoadingSource.next(false));
     }
 

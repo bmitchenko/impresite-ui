@@ -1,12 +1,9 @@
 import { Attribute, Component, Input } from '@angular/core';
 
-import * as template from "./breadcrumb-item.component.html";
-import * as styles from "./breadcrumb-item.component.scss";
-
 @Component({
     selector: 'breadcrumb-item',
-    styles: [styles],
-    template: template
+    styleUrls: ['./breadcrumb-item.component.scss'],
+    templateUrl: './breadcrumb-item.component.html'
 })
 export class BreadcrumbItemComponent {
     private _active: boolean | string = false;

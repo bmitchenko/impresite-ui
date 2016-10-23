@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Renderer } from '@angular/core';
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
+import '../../rxjs-operators';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
@@ -11,13 +12,10 @@ import { TextHelper } from '../../helpers/text.helper';
 import { PopupComponent } from '../popup/popup.component';
 import { ScrollTopDirective } from '../../directives/scroll-top.directive';
 
-import * as template from "./autocomplete.component.html";
-import * as styles from "./autocomplete.component.scss";
-
 @Component({
     selector: 'autocomplete',
-    styles: [styles],
-    template: template,
+    styleUrls: ['./autocomplete.component.scss'],
+    templateUrl: './autocomplete.component.html',
     providers: [
         AutocompleteService
     ]

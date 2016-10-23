@@ -4,13 +4,10 @@ import { OnInit, AfterViewInit } from '@angular/core';
 
 import { BreadcrumbItemComponent } from "./breadcrumb-item.component";
 
-import * as template from "./breadcrumb.component.html";
-import * as styles from "./breadcrumb.component.scss";
-
 @Component({
     selector: 'breadcrumb',
-    styles: [styles],
-    template: template
+    styleUrls: ['./breadcrumb.component.scss'],
+    templateUrl: './breadcrumb.component.html'
 })
 export class BreadcrumbComponent {
     @Input()

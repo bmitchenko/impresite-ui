@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import { YandexMapComponent } from '../../components/yandex-map/yandex-map.component';
 
-import * as template from "./yandex-map-demo.component.html";
-import * as styles from "./yandex-map-demo.component.scss";
-
 @Component({
     selector: 'yandex-map-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./yandex-map-demo.component.scss'],
+    templateUrl: './yandex-map-demo.component.html'
 })
 export class YandexMapDemoComponent {
     @ViewChild(YandexMapComponent)

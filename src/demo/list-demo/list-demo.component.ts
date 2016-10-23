@@ -3,13 +3,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ListComponent } from '../../components/list/list.component';
 import { Data } from '../../test-data';
 
-import * as template from "./list-demo.component.html";
-import * as styles from "./list-demo.component.scss";
-
 @Component({
     selector: 'list-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./list-demo.component.scss'],
+    templateUrl: './list-demo.component.html'
 })
 export class ListDemoComponent {
     @ViewChild(ListComponent)

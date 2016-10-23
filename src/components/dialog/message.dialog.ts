@@ -4,13 +4,10 @@ import { OnInit, AfterViewInit } from '@angular/core';
 
 import { IDialog } from "./dialog";
 
-import * as template from "./message.dialog.html";
-import * as styles from "./message.dialog.scss";
-
 @Component({
     selector: 'message-dialog',
-    styles: [styles],
-    template: template
+    styleUrls: ['./message.dialog.scss'],
+    templateUrl: './message.dialog.html'
 })
 export class MessageDialog implements IDialog {
     private _buttons: IMessageDialogButton[] = [];
@@ -19,6 +16,16 @@ export class MessageDialog implements IDialog {
     private _icon: MessageDialogIcon;
     private _iconClass: string;
     private _message: string;
+
+    constructor() {
+    }
+
+    public onInit(params: any): void {
+        this.message = params.message;
+        this.header = params.header;
+        this.commands = params.commands;
+        this.icon = params.icon;
+    }
 
     public get commands(): MessageDialogCommand[] {
         return this._commands;

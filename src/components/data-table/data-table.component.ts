@@ -2,6 +2,7 @@ import { Component, Directive, EventEmitter } from '@angular/core';
 import { TemplateRef, ViewContainerRef, ElementRef } from '@angular/core';
 import { Input, Output, ContentChild, ContentChildren,  ViewChild, QueryList, HostListener } from '@angular/core';
 import { AfterViewInit, OnDestroy } from '@angular/core';
+import '../../rxjs-operators';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
@@ -15,9 +16,6 @@ import { IPagedList } from "../../data/paged-list";
 import { DataSourceChangeArguments } from "../../data/data-source-change-arguments";
 import { DataSourceChangeType } from "../../data/data-source-change-type";
 
-import * as componentTemplate from "./data-table.component.html";
-import * as componentStyles from "./data-table.component.scss";
-
 @Directive({
     selector: '[data-status-text]',
 })
@@ -28,8 +26,8 @@ export class DataStatusTextDirective {
 
 @Component({
     selector: 'data-table',
-    template: componentTemplate,
-    styles: [componentStyles],
+    styleUrls: ['./data-table.component.scss'],
+    templateUrl: './data-table.component.html',
     providers: [
         DataTableService
     ]

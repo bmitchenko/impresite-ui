@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef, AfterViewInit, DoCheck } from '@angul
 
 import { ErrorListComponent } from '../../components/error-list/error-list.component';
 
-import * as template from "./error-list-demo.component.html";
-import * as styles from "./error-list-demo.component.scss";
-
 @Component({
     selector: 'error-list-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./error-list-demo.component.scss'],
+    templateUrl: './error-list-demo.component.html'
 })
 export class ErrorListDemoComponent implements DoCheck {
     private firstName: string;

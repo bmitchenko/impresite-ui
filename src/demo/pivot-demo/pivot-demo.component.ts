@@ -1,19 +1,19 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren, ElementRef, AfterViewInit } from '@angular/core';
 
 import { PivotComponent } from '../../components/pivot/pivot.component';
 import { Data } from '../../test-data';
 
-import * as template from "./pivot-demo.component.html";
-import * as styles from "./pivot-demo.component.scss";
-
 @Component({
     selector: 'pivot-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./pivot-demo.component.scss'],
+    templateUrl: './pivot-demo.component.html'
 })
-export class PivotDemoComponent {
+export class PivotDemoComponent implements AfterViewInit {
     @ViewChild(PivotComponent)
     public pivot: PivotComponent;
+
+    @ViewChildren(PivotComponent)
+    public pivots: QueryList<PivotComponent>;
 
     private statusList = ['For Rent', 'For Sale', 'Sold'];
     private status: string;
@@ -27,5 +27,11 @@ export class PivotDemoComponent {
     private group: any;
 
     constructor() {
+    }
+
+    public ngAfterViewInit() {
+        this.pivots.forEach((pivot) => {
+            pivot.selectedIndex = 0;
+        });
     }
 }

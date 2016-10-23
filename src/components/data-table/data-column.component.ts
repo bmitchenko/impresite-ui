@@ -1,5 +1,6 @@
 import { Component, ContentChild, Directive, EventEmitter, Input, Output, TemplateRef, ViewContainerRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { DataTableService } from "./data-table.service";
+import '../../rxjs-operators';
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";

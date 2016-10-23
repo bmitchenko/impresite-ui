@@ -1,12 +1,9 @@
 import { Attribute, Component, Input, Output, EventEmitter, HostBinding, HostListener } from '@angular/core';
 
-import * as template from "./pivot-item.component.html";
-import * as styles from "./pivot-item.component.scss";
-
 @Component({
     selector: 'pivot-item',
-    styles: [styles],
-    template: template
+    styleUrls: ['./pivot-item.component.scss'],
+    templateUrl: './pivot-item.component.html'
 })
 export class PivotItemComponent {
     private _selected: boolean = false;

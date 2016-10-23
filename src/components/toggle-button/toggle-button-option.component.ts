@@ -1,12 +1,9 @@
 import { Attribute, Component, Input, Output, EventEmitter, HostBinding, HostListener } from '@angular/core';
 
-import * as template from "./toggle-button-option.component.html";
-import * as styles from "./toggle-button-option.component.scss";
-
 @Component({
     selector: 'toggle-button-option',
-    styles: [styles],
-    template: template
+    styleUrls: ['./toggle-button-option.component.scss'],
+    templateUrl: './toggle-button-option.component.html'
 })
 export class ToggleButtonOptionComponent {
     private _selected: boolean = false;

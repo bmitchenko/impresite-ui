@@ -5,13 +5,10 @@ import { ArrayDataSource } from './data/array-data-source';
 import './styles/styles.scss';
 import './rxjs-operators';
 
-import * as template from "./app.component.html";
-import * as styles from "./app.component.scss";
-
 @Component({
     selector: 'my-app',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./app.component.scss'],
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
     constructor() {

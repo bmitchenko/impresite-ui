@@ -1,12 +1,10 @@
 import { Component, HostBinding, HostListener, EventEmitter, Input, Output, Renderer, ElementRef } from '@angular/core';
 import { AfterViewInit, OnDestroy } from '@angular/core';
 
-import * as componentStyles from "./popup.component.scss";
-
 @Component({
     selector: 'popup',
     template: "<ng-content></ng-content>",
-    styles: [componentStyles]
+    styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent implements OnDestroy {
     private _autoclose = true;

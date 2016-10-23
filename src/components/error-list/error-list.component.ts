@@ -2,9 +2,6 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./error-list.component.html";
-import * as styles from "./error-list.component.scss";
-
 export interface IErrorListItem {
     propertyName: string;
     errorMessage: string;
@@ -17,8 +14,8 @@ interface IErrorMessage {
 
 @Component({
     selector: 'error-list',
-    styles: [styles],
-    template: template
+    styleUrls: ['./error-list.component.scss'],
+    templateUrl: './error-list.component.html'
 })
 export class ErrorListComponent {
     private _errors: IErrorListItem[];

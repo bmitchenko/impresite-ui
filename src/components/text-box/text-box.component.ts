@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from './text-box.component.html';
-import * as styles from './text-box.component.scss';
-
 @Component({
     selector: 'text-box',
-    styles: [styles],
-    template: template
+    styleUrls: ['./text-box.component.scss'],
+    templateUrl: './text-box.component.html'
 })
 export class TextBoxComponent implements AfterViewInit {
     private _autofocus = false;

@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import { CalendarComponent } from '../../components/calendar/calendar.component';
 
-import * as template from "./calendar-demo.component.html";
-import * as styles from "./calendar-demo.component.scss";
-
 @Component({
     selector: 'calendar-demo',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./calendar-demo.component.scss'],
+    templateUrl: './calendar-demo.component.html'
 })
 export class CalendarDemoComponent {
     @ViewChild(CalendarComponent)

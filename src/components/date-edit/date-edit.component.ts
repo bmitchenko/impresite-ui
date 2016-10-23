@@ -4,13 +4,10 @@ import { AfterViewInit, OnDestroy } from '@angular/core';
 
 import { PopupComponent } from '../popup/popup.component';
 
-import * as template from "./date-edit.component.html";
-import * as styles from "./date-edit.component.scss";
-
 @Component({
     selector: 'date-edit',
-    styles: [styles],
-    template: template
+    styleUrls: ['./date-edit.component.scss'],
+    templateUrl: './date-edit.component.html'
 })
 export class DateEditComponent implements AfterViewInit, OnDestroy {
     private _autofocus = false;

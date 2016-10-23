@@ -7,6 +7,8 @@
         <div class="message-dialog-message" [innerHTML]="_message"></div>
     </main>
     <footer>
-        <flat-button *ngFor="let button of _buttons" [class.primary]="button.isPrimary" [class.warn]="button.isWarn" (click)="buttonClick(button)">{{button.text}}</flat-button>
+        <flat-button *ngFor="let button of _buttons" [class.primary]="button.isPrimary" [class.warn]="button.isWarn" (click)="buttonClick(button)">
+            {{button.text}}
+        </flat-button>
     </footer>
 </modal-window>

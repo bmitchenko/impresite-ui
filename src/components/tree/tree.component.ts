@@ -3,13 +3,11 @@ import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChildren 
 import { OnInit, AfterViewInit } from '@angular/core';
 
 import { ITreeNode, TreeNodeComponent } from "./tree-node.component";
-import * as template from "./tree.component.html";
-import * as styles from "./tree.component.scss";
 
 @Component({
     selector: 'tree',
-    styles: [styles],
-    template: template
+    styleUrls: ['./tree.component.scss'],
+    templateUrl: './tree.component.html'
 })
 export class TreeComponent implements AfterViewInit {
     private _initialized = false;

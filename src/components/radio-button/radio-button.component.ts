@@ -2,13 +2,10 @@ import { Component, ElementRef, EventEmitter, Input, Output, TemplateRef, Render
 import { ContentChild, ContentChildren, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { OnInit, AfterViewInit } from '@angular/core';
 
-import * as template from "./radio-button.component.html";
-import * as styles from "./radio-button.component.scss";
-
 @Component({
     selector: 'radio-button',
-    styles: [styles],
-    template: template
+    styleUrls: ['./radio-button.component.scss'],
+    templateUrl: './radio-button.component.html'
 })
 export class RadioButtonComponent implements OnInit, AfterViewInit {
     private _autofocus = false;

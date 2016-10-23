@@ -2,13 +2,10 @@ import { Component, ViewChild, ElementRef, AfterViewInit, DoCheck, EventEmitter 
 
 import { DialogService } from '../../components/dialog/dialog.service';
 
-import * as template from "./registration.component.html";
-import * as styles from "./registration.component.scss";
-
 @Component({
     selector: 'registration',
-    template: template,
-    styles: [styles]
+    styleUrls: ['./registration.component.scss'],
+    templateUrl: './registration.component.html'
 })
 export class RegistrationComponent implements DoCheck {
     private userName: string;
